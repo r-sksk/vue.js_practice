@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@next"></script>
+</head>
+<body>
+<style>
+    .blue {
+        color: blue
+    }
+    .red {
+        color: red
+    }
+</style>
+
+  <div id="app1">
+    <p v-bind:class="class1">あいうえお</p> <!-- 属性の展開 -->
+  </div>
+
+  <script>
+    const App1 = {
+        data() {
+            return {
+                class1: "red"
+            }
+        },
+    }
+
+    app1 = Vue.createApp(App1) //インスタンスの生成
+    app1.mount('#app1')  //コントロールの宣言
+  </script>
+</body>
+</html>

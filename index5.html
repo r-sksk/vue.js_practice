@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@next"></script>
+</head>
+<body>
+  <div id="app1">
+      <ul>
+        <li v-for="todo in todos"> <!-- ループ処理 -->
+          {{todo.text}}
+        </li>
+      </ul>
+  </div>
+
+  <script>
+    const App1 = {
+        data() {
+            return {
+                todos: [
+                    { text: 'php'},
+                    { text: 'ruby'},
+                    { text: 'python'},
+                ]
+            }
+        },
+    }
+
+    app1 = Vue.createApp(App1) //インスタンスの生成
+    app1.mount('#app1')  //コントロールの宣言
+  </script>
+</body>
+</html>
